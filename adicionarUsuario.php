@@ -33,7 +33,7 @@ if (isset($_GET['id'])){
             </div>
             <div>
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" 
+                <input type="email" id="email" name="email" required="required"
                        value="<?php echo (isset($_GET['id'])?$usuario->getEmail():"") ?>"/>
             </div>
             <div>

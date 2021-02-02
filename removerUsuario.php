@@ -14,7 +14,7 @@ and open the template in the editor.
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/dao/UsuarioDAO.php";
         $dao= new UsuarioDAO();
         $dao->remover($_GET['id']);
-        header('Location: '.$_SERVER['HTTP_HOST'].'/sysoficin/listarUsuario.php');
+        header('Location: http://'.$_SERVER['HTTP_HOST'].'/sysoficin/listarUsuario.php');
         ?>
     </body>
 </html>

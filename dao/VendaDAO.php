@@ -37,7 +37,7 @@ class VendaDAO {
     function remover($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "DELETE FROM 'venda' WHERE id= :idRemovido";
+            $sql = "DELETE FROM venda WHERE id= :idRemovido";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idRemovido", $id);
             $p_sql->execute();
@@ -50,10 +50,10 @@ class VendaDAO {
     function listar(){
         
     }
-    function PegarPorId(){
+    function PegarPorId($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'venda' where id= :idBuscar";
+            $sql = "SELECT * FROM venda where id= :idBuscar";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idBuscar", $id);
             $p_sql->execute();
@@ -76,7 +76,7 @@ class VendaDAO {
     function listarTodos(){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'venda' order by data ASC";
+            $sql = "SELECT * FROM venda order by data ASC";
             $p_sql= $dbh->prepare($sql);
             $p_sql->execute();
             $dados= $p_sql->fetchAll(PDO::FETCH_OBJ);

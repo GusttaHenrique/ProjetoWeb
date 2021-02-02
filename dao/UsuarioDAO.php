@@ -37,7 +37,7 @@ class UsuarioDAO {
     function remover($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "DELETE FROM 'usuario' WHERE id= :idRemovido";
+            $sql = "DELETE FROM usuario WHERE id= :idRemovido";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idRemovido", $id);
             $p_sql->execute();
@@ -54,7 +54,7 @@ class UsuarioDAO {
     function logar($login, $senha){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'usuario' WHERE 'login=:login and 'senha'=:senha";
+            $sql = "SELECT * FROM usuario WHERE login=:login and senha=:senha";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":login", $login);
             $p_sql->bindValue(":senha", $senha);
@@ -76,10 +76,10 @@ class UsuarioDAO {
         
     }
     
-    function PegarPorId(){
+    function PegarPorId($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'usuario' where id= :idBuscar";
+            $sql = "SELECT * FROM usuario where id= :idBuscar";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idBuscar", $id);
             $p_sql->execute();
@@ -103,7 +103,7 @@ class UsuarioDAO {
     function listarTodos(){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'usuario' order by nome ASC";
+            $sql = "SELECT * FROM usuario order by nome ASC";
             $p_sql= $dbh->prepare($sql);
             $p_sql->execute();
             $dados= $p_sql->fetchAll(PDO::FETCH_OBJ);

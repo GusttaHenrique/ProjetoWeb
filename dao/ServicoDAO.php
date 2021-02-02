@@ -4,9 +4,10 @@ class ServicoDAO {
     function salvar($obj){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "insert into servico (nome,preco,descricao)
-                values (:nome,:preco,:descricao)";
+            $sql = "insert into servico (codigo,nome,preco,descricao)
+                values (:codigo,:nome,:preco,:descricao)";
             $p_sql= $dbh->prepare($sql);
+            $p_sql->bindValue(":codigo", $obj->getCodigo());
             $p_sql->bindValue(":nome", $obj->getNome());
             $p_sql->bindValue(":preco", $obj->getPreco());
             $p_sql->bindValue(":descricao", $obj->getDescricao());
@@ -20,8 +21,9 @@ class ServicoDAO {
     function atualizar($obj){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "UPDATE servico SET nome=:nome,preco=:preco,descricao=:descricao WHERE id=:id";
+            $sql = "UPDATE servico SET codigo=:codigo,nome=:nome,preco=:preco,descricao=:descricao WHERE id=:id";
             $p_sql= $dbh->prepare($sql);
+            $p_sql->bindValue(":codigo", $obj->getCodigo());
             $p_sql->bindValue(":nome", $obj->getNome());
             $p_sql->bindValue(":preco", $obj->getPreco());
             $p_sql->bindValue(":descricao", $obj->getDescricao());
@@ -35,7 +37,7 @@ class ServicoDAO {
     function remover($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "DELETE FROM 'servico' WHERE id= :idRemovido";
+            $sql = "DELETE FROM servico WHERE id= :idRemovido";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idRemovido", $id);
             $p_sql->execute();
@@ -48,10 +50,10 @@ class ServicoDAO {
     function listar(){
         
     }
-    function PegarPorId(){
+    function PegarPorId($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'servico' where id= :idBuscar";
+            $sql = "SELECT * FROM servico where id= :idBuscar";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idBuscar", $id);
             $p_sql->execute();
@@ -74,7 +76,7 @@ class ServicoDAO {
     function listarTodos(){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'servico' order by nome ASC";
+            $sql = "SELECT * FROM servico order by nome ASC";
             $p_sql= $dbh->prepare($sql);
             $p_sql->execute();
             $dados= $p_sql->fetchAll(PDO::FETCH_OBJ);
@@ -92,6 +94,7 @@ class ServicoDAO {
     private static function popular($dados){
         $obj= new Servico();
         $obj->setId($dados->id);
+        $obj->setCodigo($dados->codigo);
         $obj->setNome($dados->nome);
         $obj->setPreco($dados->preco);
         $obj->setDescricao($dados->descricao);

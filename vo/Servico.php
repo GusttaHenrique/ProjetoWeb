@@ -2,6 +2,7 @@
 
 class Servico {
     private $id;
+    private $codigo;
     private $nome;
     private $preco;
     private $descricao;
@@ -10,6 +11,10 @@ class Servico {
         return $this->id;
     }
 
+    function getCodigo() {
+        return $this->codigo;
+    }
+    
     function getNome() {
         return $this->nome;
     }
@@ -26,6 +31,10 @@ class Servico {
         $this->id = $id;
     }
 
+    function setCodigo($codigo) {
+        $this->codigo = $codigo;
+    }
+    
     function setNome($nome) {
         $this->nome = $nome;
     }

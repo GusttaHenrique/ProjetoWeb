@@ -1,9 +1,8 @@
 <?php
-print_r($POST);
+
 $login=$_POST['login'];
 $senha=$_POST['senha'];
 require_once $_SERVER['DOCUMENT_ROOT']."/sysoficin/dao/UsuarioDAO.php";
-
 $dao= new UsuarioDAO();
 $usuarioLogado= $dao->logar($login, $senha);
 if ($usuarioLogado!=null){

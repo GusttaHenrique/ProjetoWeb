@@ -42,7 +42,7 @@ class ProdutoDAO {
     function remover($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "DELETE FROM 'produto' WHERE id= :idRemovido";
+            $sql = "DELETE FROM produto WHERE id= :idRemovido";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idRemovido", $id);
             $p_sql->execute();
@@ -56,10 +56,10 @@ class ProdutoDAO {
         
     }
     
-    function PegarPorId(){
+    function PegarPorId($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'produto' where id= :idBuscar";
+            $sql = "SELECT * FROM produto where id= :idBuscar";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idBuscar", $id);
             $p_sql->execute();
@@ -82,7 +82,7 @@ class ProdutoDAO {
     function listarTodos(){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'produto' order by codigo ASC";
+            $sql = "SELECT * FROM produto order by codigo ASC";
             $p_sql= $dbh->prepare($sql);
             $p_sql->execute();
             $dados= $p_sql->fetchAll(PDO::FETCH_OBJ);

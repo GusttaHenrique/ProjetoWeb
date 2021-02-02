@@ -31,7 +31,7 @@ class PermissaoDAO {
     function remover($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "DELETE FROM 'permissao' WHERE id= :idRemovido";
+            $sql = "DELETE FROM permissao WHERE id= :idRemovido";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idRemovido", $id);
             $p_sql->execute();
@@ -44,10 +44,10 @@ class PermissaoDAO {
     function listar(){
         
     }
-    function PegarPorId(){
+    function PegarPorId($id){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'permissao' where id= :idBuscar";
+            $sql = "SELECT * FROM permissao where id= :idBuscar";
             $p_sql= $dbh->prepare($sql);
             $p_sql->bindValue(":idBuscar", $id);
             $p_sql->execute();
@@ -70,7 +70,7 @@ class PermissaoDAO {
     function listarTodos(){
         require $_SERVER['DOCUMENT_ROOT']."/sysoficin/bd/Conexao.php";
         try {
-            $sql = "SELECT * FROM 'permissao' order by descricao ASC";
+            $sql = "SELECT * FROM permissao order by descricao ASC";
             $p_sql= $dbh->prepare($sql);
             $p_sql->execute();
             $dados= $p_sql->fetchAll(PDO::FETCH_OBJ);
