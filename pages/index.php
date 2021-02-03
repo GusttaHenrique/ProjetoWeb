@@ -151,12 +151,12 @@
                                             <i class="fa fa-commenting fa-5x"></i>
                                         </div>
                                         <div class="col-xs-9 text-right">
-                                            <div class="huge">2</div>
+                                            <div class="huge">3</div>
                                             <div>Novos Comentários!</div>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#">
+                                <a href="comentario.php">
                                     <div class="panel-footer">
                                         <span class="pull-left">Ver Detalhes</span>
                                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -179,7 +179,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#">
+                                <a href="tarefa.php">
                                     <div class="panel-footer">
                                         <span class="pull-left">Ver Detalhes</span>
                                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -202,7 +202,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#">
+                                <a href="pedido.php">
                                     <div class="panel-footer">
                                         <span class="pull-left">Ver Detalhes</span>
                                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -225,7 +225,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#">
+                                <a href="atualizacao.php">
                                     <div class="panel-footer">
                                         <span class="pull-left">Ver Detalhes</span>
                                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -347,28 +347,28 @@
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
                                     <div class="list-group">
-                                        <a href="#" class="list-group-item">
-                                            <i class="fa fa-comment fa-fw"></i> 2 Novos Comentários
+                                        <a href="comentario.php" class="list-group-item">
+                                            <i class="fa fa-comment fa-fw"></i> 3 Novos Comentários
                                                 <span class="pull-right text-muted small"><em>2 minutos atrás</em>
                                                 </span>
                                         </a>
                                         
                                         <a href="#" class="list-group-item">
-                                            <i class="fa fa-twitter fa-fw"></i> 3 Novos Seguidores
+                                            <i class="fa fa-twitter fa-fw"></i> 2 Novos Seguidores
                                                 <span class="pull-right text-muted small"><em>7 minutes ago</em>
                                                 </span>
                                         </a>
-                                        <a href="#" class="list-group-item">
+                                        <a href="tarefa.php" class="list-group-item">
                                             <i class="fa fa-tasks fa-fw"></i> 2 Novas Tarefas
                                                 <span class="pull-right text-muted small"><em>43 minutes ago</em>
                                                 </span>
                                         </a>
-                                        <a href="#" class="list-group-item">
+                                        <a href="pedido.php" class="list-group-item">
                                             <i class="fa fa-shopping-cart fa-fw"></i> Novo Pedido Feito
                                                 <span class="pull-right text-muted small"><em>8:47 AM</em>
                                                 </span>
                                         </a>
-                                        <a href="#" class="list-group-item">
+                                        <a href="atualizacao.php" class="list-group-item">
                                             <i class="fa fa-cloud-download fa-fw"></i> Servidor Reiniciado
                                                 <span class="pull-right text-muted small"><em>segunda-feira</em>
                                                 </span>
@@ -501,10 +501,10 @@
                                 <div class="panel-footer">
                                     <div class="input-group">
                                         <input id="btn-input" type="text" class="form-control input-sm"
-                                               placeholder="Type your message here..."/>
+                                               placeholder="Digite sua mensagem aqui..."/>
                                             <span class="input-group-btn">
                                                 <button class="btn btn-warning btn-sm" id="btn-chat">
-                                                    Send
+                                                    Enviar
                                                 </button>
                                             </span>
                                     </div>

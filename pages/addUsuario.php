@@ -169,7 +169,7 @@
                                                 </div>
                                         </div>
                                             
-                                        <div class="col-lg-8">    
+                                        <div class="col-lg-5">    
                                             <button type="submit" class="btn btn-success">Salvar</button>
                                             <button type="reset" class="btn btn-warning">Limpar</button>
                                             </form>

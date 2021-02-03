@@ -221,11 +221,11 @@
                                         </div>
                                         <div class="col-lg-8">    
                                             <div class="form-group input-group">
-                                                    <span class="input-group-addon">Email:</span>
+                                                    <span class="input-group-addon">E-mail:</span>
                                                     <input type="text" class="form-control" placeholder="Digite o seu Email..." id="email" name="email">
                                                 </div>
                                         </div>
-                                        <div class="col-lg-8">    
+                                        <div class="col-lg-4">    
                                                 <button type="submit" class="btn btn-success">Salvar</button>
                                                 <button type="reset" class="btn btn-warning">Limpar</button>
                                             </form>

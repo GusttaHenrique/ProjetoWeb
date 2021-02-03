@@ -33,9 +33,9 @@
                         <!-- Notificações Sininho -->
                         <ul class="dropdown-menu dropdown-alerts">
                             <li>
-                                <a href="#">
+                                <a href="comentario.php">
                                     <div>
-                                        <i class="fa fa-comment fa-fw"></i> 2 Novos Comentários
+                                        <i class="fa fa-comment fa-fw"></i> 3 Novos Comentários
                                         <span class="pull-right text-muted small">2 minutos atrás</span>
                                     </div>
                                 </a>
@@ -43,13 +43,13 @@
                             <li>
                                 <a href="#">
                                     <div>
-                                        <i class="fa fa-twitter fa-fw"></i> 3 Novos Seguidores
+                                        <i class="fa fa-twitter fa-fw"></i> 2 Novos Seguidores
                                         <span class="pull-right text-muted small">7 minutes ago</span>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="tarefa.php">
                                     <div>
                                         <i class="fa fa-tasks fa-fw"></i> 2 Novas Tarefas
                                         <span class="pull-right text-muted small">43 minutes ago</span>
@@ -57,7 +57,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="pedido.php">
                                     <div>
                                         <i class="fa fa-shopping-cart fa-fw"></i> Novo Pedido Feito
                                         <span class="pull-right text-muted small">8:47 AM</span>
@@ -65,7 +65,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="atualizacao.php">
                                     <div>
                                         <i class="fa fa-cloud-download fa-fw"></i> Servidor Reiniciado
                                         <span class="pull-right text-muted small">segunda-feira</span>
